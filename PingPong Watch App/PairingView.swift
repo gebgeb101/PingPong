@@ -17,7 +17,7 @@ struct PairingView: View {
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .padding()
-                        
+                                    
             Circle()
                 .fill(Color.blue)
                 .frame(width: 45, height: 45)

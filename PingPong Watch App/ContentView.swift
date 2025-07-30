@@ -10,30 +10,32 @@ import WatchKit
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        NavigationStack {
             VStack {
-                Text("Let's Play")
-                Text("PingPong Together")
-            }
-            .font(.headline)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .multilineTextAlignment(.center)
-            
-            Image(.logoPP)
-                .resizable().frame(width: 55, height: 50)
-                .padding()
-            
-            NavigationLink(destination: PairingView()) {
-                Text("Start")
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
-                    .frame(width: 180, height: 55)
-                    .background(Color.white)
-                    .cornerRadius(30)
-            }
-            .onTapGesture {
+                VStack {
+                    Text("Let's Play")
+                    Text("PingPong Together")
+                }
+                .font(.headline)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                
+                Image(.logoPP)
+                    .resizable().frame(width: 55, height: 50)
+                    .padding()
+                
+                NavigationLink(destination: PairingView()) {
+                    Text("Start")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                        .frame(width: 180, height: 55)
+                        .background(Color.white)
+                        .cornerRadius(30)
+                }
+                .onTapGesture {
+                }
             }
         }
     }

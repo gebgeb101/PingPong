@@ -8,22 +8,10 @@
 import SwiftUI
 import WatchKit
 
-//struct PlayingView: View {
-//    var body: some View {
-//        
-//        var score = 0
-//        
-//        NavigationStack {
-//                    VStack {
-//                        NavigationLink("Back", destination: PlayingView())
-//                    }
-//                    .overlay{
-//                    }.navigationTitle("back") .offset(y: -100) // Acts like a navigation bar title
-//                }
-
 struct PlayingView: View {
     
-    @State private var score = 0
+    @State private var scoreRed = 0
+    @State private var scoreBlue = 0
     @State private var setScore = 0
 
     var body: some View {
@@ -37,42 +25,46 @@ struct PlayingView: View {
                         .multilineTextAlignment(.center)
                         .offset(y: 0)
                     
-                    VStack {
-                        Label {
+                    VStack(alignment: .leading) {
+                        HStack(spacing: 5) {
                             Text("Team Red")
                                 .font(.footnote)
                                 .fontWeight(.medium)
-                        } icon: {
+                                .padding(.leading, 20)
+                            //input logic for red appear on top if we choose this team red
+                            
                             Image("LogoPP")
                                 .resizable()
                                 .frame(width: 10, height: 10)
-                            //input logic for logo appear if we choose this team blue
+                            //input logic for logo appear if we choose this team red
                         }
-                        .multilineTextAlignment(.center)
-                        .offset(x: -40, y: 0)
                         
-                        HStack {
-                            Text("\(score)")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .padding()
-                                .position(x: 60, y: 25)
-                            
-                            VStack() {
-                                Image(systemName: "plus")
-                                    .onTapGesture {
-                                        score += 1
-                                    }
-                                    .padding(40)
-                                                                
+                        HStack(spacing: 20) {
+                            HStack {
                                 Image(systemName: "minus")
+                                    .font(.title2)
                                     .onTapGesture {
-                                        score -= 1
+                                        scoreRed -= 1
                                     }
                             }
-                            .fontWeight(.bold)
-                            .position(x: 50, y: 0)
+                            .position(x: 50, y: 30)
+                            
+                            HStack {
+                                Text("\(scoreRed)")
+                                    .font(.largeTitle)
+                            }
+                            .position(x: 25, y: 30)
+                            
+                            HStack {
+                                Image(systemName: "plus")
+                                    .font(.title2)
+                                    .onTapGesture {
+                                        scoreRed += 1
+                                    }
+                            }
+                            .position(x: 0, y: 30)
                         }
+                        .fontWeight(.bold)
                     }
                 }
                 
@@ -105,42 +97,46 @@ struct PlayingView: View {
                         .multilineTextAlignment(.center)
                         .offset(y: 0)
                     
-                    VStack {
-                        Label {
+                    VStack(alignment: .leading) {
+                        HStack(spacing: 5) {
                             Text("Team Blue")
                                 .font(.footnote)
                                 .fontWeight(.medium)
-                        } icon: {
+                                .padding(.leading, 20)
+                            //input logic for blue appear on top if we choose this team blue
+                            
                             Image("LogoPP")
                                 .resizable()
                                 .frame(width: 10, height: 10)
                             //input logic for logo appear if we choose this team blue
                         }
-                        .multilineTextAlignment(.center)
-                        .offset(x: -40, y: 0)
                         
-                        HStack {
-                            Text("\(score)")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .padding()
-                                .position(x: 60, y: 20)
-                            
-                            VStack() {
-                                Image(systemName: "plus")
-                                    .onTapGesture {
-                                        score += 1
-                                    }
-                                    .padding(30)
-                                                                
+                        HStack(spacing: 20) {
+                            HStack {
                                 Image(systemName: "minus")
+                                    .font(.title2)
                                     .onTapGesture {
-                                        score -= 1
+                                        scoreBlue -= 1
                                     }
                             }
-                            .fontWeight(.bold)
-                            .position(x: 50, y: 0)
+                            .position(x: 50, y: 20)
+                            
+                            HStack {
+                                Text("\(scoreBlue)")
+                                    .font(.largeTitle)
+                            }
+                            .position(x: 25, y: 20)
+                            
+                            HStack {
+                                Image(systemName: "plus")
+                                    .font(.title2)
+                                    .onTapGesture {
+                                        scoreBlue += 1
+                                    }
+                            }
+                            .position(x: 0, y: 20)
                         }
+                        .fontWeight(.bold)
                     }
                 }
             }
@@ -156,5 +152,5 @@ struct PlayingView: View {
 }
 
 #Preview {
-    ContentView()
+    PlayingView()
 }
