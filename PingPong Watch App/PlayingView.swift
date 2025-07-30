@@ -156,5 +156,5 @@ struct PlayingView: View {
 }
 
 #Preview {
-    PlayingView()
+    ContentView()
 }

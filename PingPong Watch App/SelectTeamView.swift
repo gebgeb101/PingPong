@@ -52,5 +52,5 @@ struct SelectTeamView: View {
 }
 
 #Preview {
-    SelectTeamView()
+    ContentView()
 }

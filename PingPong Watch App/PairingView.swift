@@ -35,5 +35,5 @@ struct PairingView: View {
 }
 
 #Preview {
-    PairingView()
+    ContentView()
 }
