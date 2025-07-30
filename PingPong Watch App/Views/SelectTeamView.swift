@@ -9,6 +9,8 @@ import SwiftUI
 import WatchKit
 
 struct SelectTeamView: View {
+    @StateObject private var gameManager = GameManager.shared
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -17,9 +19,12 @@ struct SelectTeamView: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .offset(y: -20)
-
+                
                 HStack(spacing: 10) {
-                    NavigationLink(destination: PlayingView()) {
+                    
+                    Button(action: {
+                        gameManager.selectTeam(.red)
+                    }) {
                         Text("TEAM RED")
                             .font(.caption)
                             .fontWeight(.bold)
@@ -28,8 +33,10 @@ struct SelectTeamView: View {
                             .background(Color.primaryRed)
                             .cornerRadius(10)
                     }
-
-                    NavigationLink(destination: PlayingView()) {
+                    
+                    Button(action: {
+                        gameManager.selectTeam(.blue)
+                    }) {
                         Text("TEAM BLUE")
                             .font(.caption)
                             .fontWeight(.bold)
@@ -38,7 +45,15 @@ struct SelectTeamView: View {
                             .background(Color.primaryBlue)
                             .cornerRadius(10)
                     }
+                    
                 }
+                NavigationLink(
+                    destination: PlayingView(),
+                    isActive: .constant(gameManager.gameState == .playing)
+                ) {
+                    EmptyView()
+                }
+                .buttonStyle(PlainButtonStyle())
             }
             .navigationTitle {
                 Text ("Exit")
@@ -52,5 +67,5 @@ struct SelectTeamView: View {
 }
 
 #Preview {
-    ContentView()
+    SelectTeamView()
 }

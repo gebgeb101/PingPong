@@ -9,6 +9,8 @@ import SwiftUI
 import WatchKit
 
 struct ContentView: View {
+    @StateObject private var gameManager = GameManager.shared
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -35,6 +37,7 @@ struct ContentView: View {
                         .cornerRadius(30)
                 }
                 .onTapGesture {
+                    gameManager.startSearching()
                 }
             }
         }

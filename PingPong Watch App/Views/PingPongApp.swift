@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct PingPong_Watch_AppApp: App {
+    
+    init() {
+        // Initialize WatchConnectivity when app launch
+        _ = GameManager.shared
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(GameManager.shared)
         }
     }
 }

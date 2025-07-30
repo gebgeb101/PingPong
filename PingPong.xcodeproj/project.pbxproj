@@ -316,10 +316,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AL4X2KXW67;
+				DEVELOPMENT_TEAM = CDX7B5NXL9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Qiiman;
+				INFOPLIST_FILE = "PingPong-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PingPong;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect with other players";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "This app uses local network to find other players for ping pong matches";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -327,7 +330,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.konco.Qiiman.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.konco.PingPong.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -345,10 +348,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AL4X2KXW67;
+				DEVELOPMENT_TEAM = CDX7B5NXL9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Qiiman;
+				INFOPLIST_FILE = "PingPong-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PingPong;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to connect with other players";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "This app uses local network to find other players for ping pong matches";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,7 +362,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.konco.Qiiman.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.konco.PingPong.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -373,7 +379,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AL4X2KXW67;
+				DEVELOPMENT_TEAM = CDX7B5NXL9;
 				INFOPLIST_KEY_CFBundleDisplayName = PingPong;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.konco.PingPong;
@@ -388,7 +394,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AL4X2KXW67;
+				DEVELOPMENT_TEAM = CDX7B5NXL9;
 				INFOPLIST_KEY_CFBundleDisplayName = PingPong;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.konco.PingPong;
